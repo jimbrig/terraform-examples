@@ -1,0 +1,78 @@
+# Cloud Run Provisioning with Terraform (Including SQL Service)
+
+## Setup
+
+Assign variable/export project ID:
+
+```powershell
+$project_id = gcloud config get-value project
+$env:GOOGLE_CLOUD_PROJECT = $project_id
+```
+
+or in bash:
+
+```bash
+project_id = gcloud config get-value project
+export GOOGLE_CLOUD_PROJECT=$project_id
+```
+
+Terraform will pick up the project name from the environment variable now.
+
+Run the following to pull in the providers:
+
+```bash
+terraform init
+```
+
+With the providers downloaded and a project set, you're ready to use Terraform. Go ahead!
+
+```bash
+terraform apply
+```
+
+Terraform will show you what it plans to do, and prompt you to accept. Type "yes" to accept the plan.
+
+```bash
+yes
+```
+
+
+## Post-Apply
+
+### Editing your config
+
+Now you've provisioned your resources in GCP! If you run a "plan", you should see no changes needed.
+
+```bash
+terraform plan
+```
+
+So let's make a change! Try editing a number, or appending a value to the name in the editor. Then,
+run a 'plan' again.
+
+```bash
+terraform plan
+```
+
+Afterwards you can run an apply, which implicitly does a plan and shows you the intended changes
+at the 'yes' prompt.
+
+```bash
+terraform apply
+```
+
+```bash
+yes
+```
+
+## Cleanup
+
+Run the following to remove the resources Terraform provisioned:
+
+```bash
+terraform destroy
+```
+
+```bash
+yes
+```
