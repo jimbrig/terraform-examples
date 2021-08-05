@@ -4,6 +4,16 @@
 
 This repository is used to house various implementations of utilizing [Terraform]() to provision and configure *Infrastructure as Code* across various scenarios and providers.
 
+## Contents
+
+- [Azure](./Azure): Azure Examples
+- [GCP](./GCP): Google Cloud Platform Examples
+  - [GCP/Cloud-Run](./GCP/Cloud-Run): GCP Cloun Run Examples
+  - [GCP/Cloud-Build](./GCP/Cloud-Build): GCP Cloud Build Examples
+- [Kubernetes](./Kubernetes): Kubernetes examples
+- [Docker](./Docker): Docker examples
+
+
 ## Notes
 
 ### How Terraform, providers and modules work
