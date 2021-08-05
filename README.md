@@ -1,8 +1,8 @@
 # Terraform Examples Repository
 
-This repository is used to house various implementations of utilizing [Terraform]() to provision and configur Infrastructure as Code across various scenarios and providers.
+> NOTE: Still a major *Work In Progress*, however, most work has been done with GCP Cloud Run in the [GCP/Cloud-Run Directory](https://github.com/jimbrig/terraform-examples/tree/main/GCP/Cloud-Run)
 
-Still a major *Work In Progress*, however, most work has been done with GCP Cloud Run in the [GCP/Cloud-Run Directory](https://github.com/jimbrig/terraform-examples/tree/main/GCP/Cloud-Run)
+This repository is used to house various implementations of utilizing [Terraform]() to provision and configure *Infrastructure as Code* across various scenarios and providers.
 
 ## Notes
 
