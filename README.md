@@ -1,12 +1,10 @@
-## Reference
+# Terraform Examples Repository
 
-- [Browse Providers | Terraform Registry](https://registry.terraform.io/browse/providers)
-- [Browse Modules | Terraform Registry](https://registry.terraform.io/browse/modules)
-- [hashicorp/google | Terraform Registry](https://registry.terraform.io/providers/hashicorp/google/latest)
-- [hashicorp/azurerm | Terraform Registry](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
-- [hashicorp/kubernetes | Terraform Registry](https://registry.terraform.io/providers/hashicorp/kubernetes/latest)
-- [Reuse Configuration with Modules | Terraform - HashiCorp Learn](https://learn.hashicorp.com/collections/terraform/modules?_ga=2.226448728.35528487.1628200791-1888930736.1628200791)
-- [Introduction to Infrastructure as Code with Terraform | Terraform - HashiCorp Learn](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code?_ga=2.226448728.35528487.1628200791-1888930736.1628200791)
+This repository is used to house various implementations of utilizing [Terraform]() to provision and configur Infrastructure as Code across various scenarios and providers.
+
+Still a major *Work In Progress*, however, most work has been done with GCP Cloud Run in the [GCP/Cloud-Run Directory](https://github.com/jimbrig/terraform-examples/tree/main/GCP/Cloud-Run)
+
+## Notes
 
 ### How Terraform, providers and modules work
 
@@ -19,3 +17,18 @@
 **Modules** are reusable Terraform configurations that can be called and configured by other configurations. Most modules manage a few closely related resources from a single provider.
 
 **The Terraform Registry** makes it easy to use any provider or module. To use a provider or module from this registry, just add it to your configuration; when you run `terraform init`, Terraform will automatically download everything it needs.
+
+### Reference
+
+- [Browse Providers | Terraform Registry](https://registry.terraform.io/browse/providers)
+- [Browse Modules | Terraform Registry](https://registry.terraform.io/browse/modules)
+- [hashicorp/google | Terraform Registry](https://registry.terraform.io/providers/hashicorp/google/latest)
+- [hashicorp/azurerm | Terraform Registry](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
+- [hashicorp/kubernetes | Terraform Registry](https://registry.terraform.io/providers/hashicorp/kubernetes/latest)
+- [Reuse Configuration with Modules | Terraform - HashiCorp Learn](https://learn.hashicorp.com/collections/terraform/modules?_ga=2.226448728.35528487.1628200791-1888930736.1628200791)
+- [Introduction to Infrastructure as Code with Terraform | Terraform - HashiCorp Learn](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code?_ga=2.226448728.35528487.1628200791-1888930736.1628200791)
+
+***
+
+![](https://cdn-images-1.medium.com/max/1200/1*9-ILOQ1Yxautyc_uIguhVw.png)
+
