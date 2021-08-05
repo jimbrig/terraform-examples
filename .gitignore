@@ -1,0 +1,6 @@
+.history/**
+.markdownlint.json
+*.tfstate
+*.tfstate.backup
+*.lock.hcl
+*service-account-key.json
