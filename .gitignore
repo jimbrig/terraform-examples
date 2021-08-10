@@ -4,3 +4,5 @@
 *.tfstate.backup
 *.lock.hcl
 *service-account-key.json
+
+*.exe
