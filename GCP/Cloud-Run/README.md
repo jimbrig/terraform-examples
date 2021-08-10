@@ -1,6 +1,8 @@
 # Google Cloud Run Terraform Examples
 
-## Contents
+A Suite of Terraform Modules and Examples for the Google Cloud Platform that simplifies the creation & configuration of a Cloud Run (Fully Managed) service.
+
+## Examples
 
 - [Cloud-Run-Basic](./Cloud-Run-Basic): Basic setup with minimal resources and configuration.
 - [Cloud-Run-EnvVars](./Cloud-Run-EnvVars): Setup multiple environment variables used by containers.
@@ -11,7 +13,41 @@
 - [Cloud-Run-SQL-PostgreSQL](./Cloud-Run-SQL-PostgreSQL): PostgreSQL specific server instance connection.
 - [Cloud-Run-Traffic-Split](./Cloud-Run-Traffic-Split): Example splitting traffic 25/75 on new revisions.
 
-## Argument Reference
+## Table of Contents
+
+## Introduction
+
+These examples focus on the creation & configuration of Google Cloud Run (Fully managed) services, and provides sensible defaults for many of the options.
+
+It attempts to be as complete as possible, and expose as much functionality as is available. As a result, some functionality might only be provided as part of BETA releases.
+
+Google's SLA support for this level of functionality is often not as solid as with Generally-Available releases. If you require absolute stability, this module might not be the best for you.
+
+## Requirements
+
+- Terraform 0.14 or higher.
+- `google` provider 3.67.0 or higher.
+- `google-beta` provider 3.67.0 or higher.
+
+## Reference
+
+### Inputs
+
+
+
+
+
+### Secrets & Volumes
+
+If your service requires the use of sensitive values, it is possible to store them in [Google Secret Manager](https://cloud.google.com/secret-manager) and reference those secrets in your service. This will prevent the values of those secrets from being exposed to anyone that might have access your service but not to the contents of the secrets.
+
+Secrets can either be exposed as files through mounted volumes, or through environment variables. This can be configured through the `volumes` and `env` input variables respectively.
+
+Note: Environment variables using the latest secret version will not be updated when a new version is added. Volumes using the latest version will have their contents automatically updated to reflect the latest secret version.
+
+Refer to <https://cloud.google.com/run/docs/configuring/secrets> for further reading on secrets in Cloud Run.
+
+### Argument Reference
 
 The following arguments are supported:
 
@@ -167,7 +203,7 @@ The metadata block supports:
 
 - **run.googleapis.com/ingress** sets the ingress settings for the Service. For example, "run.googleapis.com/ingress" = "all".
 
-## Attributes Reference
+### Attributes Reference
 
 In addition to the arguments listed above, the following computed attributes are exported:
 
